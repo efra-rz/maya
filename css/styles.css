@@ -2963,3 +2963,13 @@ body {
         height: 350px; } }
   .inicio__contacto .maps iframe {
     pointer-events: none; }
+
+.nosotros__acerca-de {
+  background-color: red; }
+  .nosotros__acerca-de p {
+    color: #fff; }
+
+.nosotros__mvv {
+  background-color: red; }
+  .nosotros__mvv p {
+    color: #fff; }

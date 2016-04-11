@@ -17,8 +17,12 @@
       img(src="img/logogpomaya.png", alt="")
     .ed-item.web-60.web-cross-center.web-main-end.logo-menu--menu
       ul
-        li: a(href="") inicio
-        li: a(href="") nosotros
-        li: a(href="") servicios
-        li: a(href="") contacto
+        block menu-inicio
+          li: a(href="#") inicio
+        block menu-nosotros
+          li: a(href="nosotros.html") nosotros
+        block menu-servicios 
+          li: a(href="#") servicios
+        block menu-contacto
+          li: a(href="#") contacto
       

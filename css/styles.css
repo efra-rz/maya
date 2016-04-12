@@ -2823,7 +2823,7 @@ body {
     list-style-type: none;
     padding-left: 1em; }
 
-.servicios__banner, .plagas__banner {
+.servicios__banner, .plagas__banner, .contacto__banner {
   background-color: #fff;
   background-image: url("http://placehold.it/1500x500");
   background-position: center;
@@ -2840,19 +2840,19 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .servicios__banner .ed-item, .plagas__banner .ed-item {
+  .servicios__banner .ed-item, .plagas__banner .ed-item, .contacto__banner .ed-item {
     width: 50%; }
-    .servicios__banner .ed-item h1, .plagas__banner .ed-item h1 {
+    .servicios__banner .ed-item h1, .plagas__banner .ed-item h1, .contacto__banner .ed-item h1 {
       text-align: center; }
 
-.servicios__lista, .plagas__rejilla {
+.servicios__lista, .plagas__rejilla, .contacto__form-direccion {
   background: #fff; }
 
 .home__header {
   margin-top: 30px; }
 
 .topbar {
-  background-color: #0000FE;
+  background-color: #303393;
   width: 100%;
   padding: .3em 0 .3em;
   text-align: right; }
@@ -2872,25 +2872,59 @@ body {
 
 .logo-menu {
   background-color: #fff;
-  color: #000; }
+  color: #000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .logo-menu--logo img {
     margin: 1em 0;
     margin-left: 3em;
     width: 50%;
     display: block; }
+    @media screen and (max-width: 1023px) {
+      .logo-menu--logo img {
+        margin: 1em auto; } }
   .logo-menu--menu ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     list-style-type: none;
     padding: 0;
     margin: 0; }
+    @media screen and (max-width: 1023px) {
+      .logo-menu--menu ul {
+        -webkit-flex-flow: column wrap;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
   .logo-menu--menu li {
-    display: inline-block;
-    padding: 0 1em; }
+    padding: 0 .8em; }
   .logo-menu--menu a {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "News Cycle";
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #4489ff; }
+    @media screen and (max-width: 1023px) {
+      .logo-menu--menu a {
+        font-size: 1em; } }
     .logo-menu--menu a:hover {
       color: #0000FE;
       border-bottom: 3px solid #0000FE;
@@ -2950,21 +2984,23 @@ body {
   .inicio__bienvenidos--presentacion, .inicio__bienvenidos--nosotros, .inicio__bienvenidos--servicios {
     margin: 2em 0em;
     padding: 3em 1em 3em 1em;
-    text-align: center;
-    background-color: #1169FF; }
+    text-align: center; }
+    @media screen and (max-width: 1023px) {
+      .inicio__bienvenidos--presentacion, .inicio__bienvenidos--nosotros, .inicio__bienvenidos--servicios {
+        margin: 0; } }
     .inicio__bienvenidos--presentacion img, .inicio__bienvenidos--nosotros img, .inicio__bienvenidos--servicios img {
-      border-radius: 50%; }
+      border-radius: 5%; }
     .inicio__bienvenidos--presentacion h2, .inicio__bienvenidos--nosotros h2, .inicio__bienvenidos--servicios h2 {
       margin: 0;
       margin: 1em 0 .3em;
       font-size: 1.8em;
       text-transform: uppercase;
-      color: #f2f2f2; }
+      color: #8c8c8c; }
     .inicio__bienvenidos--presentacion p, .inicio__bienvenidos--nosotros p, .inicio__bienvenidos--servicios p {
       margin-bottom: 2em;
       font-family: "Open Sans";
       font-size: .9em;
-      color: #c4daff;
+      color: #303393;
       font-weight: bold; }
     .inicio__bienvenidos--presentacion a, .inicio__bienvenidos--nosotros a, .inicio__bienvenidos--servicios a {
       text-transform: uppercase;

@@ -5,7 +5,7 @@
 
 //************ BANNERS ************//
 
-.servicios__banner, .plagas__banner{
+.servicios__banner, .plagas__banner,.contacto__banner{
   background-color: #fff;
   background-image: url("http://placehold.it/1500x500");
   background-position: center;
@@ -21,7 +21,7 @@
       }
     }
   }
-.servicios__lista, .plagas__rejilla{
+.servicios__lista, .plagas__rejilla,.contacto__form-direccion{
   background: #fff;
   }
 
@@ -34,7 +34,7 @@
   margin-top:30px;
   }
 .topbar{
-  background-color: $sec-col;
+  background-color: #303393;
   width:100%;
   padding: .3em 0 .3em;
   text-align: right;
@@ -57,29 +57,48 @@
 .logo-menu{
   background-color: #fff;
   color:#000;
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: flex-end;
+  align-items: center;
   &--logo{
     img{
       margin:1em 0;
       margin-left: 3em;
       width:50%;
       display: block;
+      @include to(web){
+        margin:1em auto;
+        }
       }
     }
   &--menu{
     ul{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
       list-style-type: none;
       padding:0;
       margin:0;
+      @include to(web){
+        flex-flow: column wrap;
+        justify-content: center;
+        }
       }
     li{
-      display: inline-block;
-      padding:0 1em;
+      padding:0 .8em;
+      @include to web{
+        padding:2em;
+        }
       }
     a{
       text-transform: uppercase;
       font-weight: bold;
       font-family: $thrd-font;
-      font-size: 1.5em;
+      font-size: 1.3em;
+      @include to(web){
+        font-size: 1em;
+        }
       color:lighten($main-col, 10%);
       &:hover{
         color:$sec-col;
@@ -144,7 +163,6 @@
 //*****************//
 
 .inicio__slider-principal{
-  // background-color: $thrd-col;
   background-color: #fff;
   color:black;
   .inicio--slider-box{
@@ -161,11 +179,29 @@
     margin: 2em 0em;
     padding:3em 1em 3em 1em;
     text-align: center;
-    background-color: $main-col;
-    img{border-radius: 50%;}
-    h2{margin:0;margin:1em 0 .3em;font-size: 1.8em;text-transform: uppercase;color:darken($thrd-col, 5%);}
-    p{margin-bottom: 2em;font-family:$main-font;font-size: .9em;color:lighten($main-col,35%);font-weight: bold;}
-    a{text-transform: uppercase; font-weight:bold;color:darken($sec-col, 25%);}
+    @include to(web){
+      margin:0;
+      }
+    img{border-radius: 5%;}
+    h2{
+      margin:0;
+      margin:1em 0 .3em;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      color:darken($thrd-col, 45%);
+      }
+    p{
+      margin-bottom: 2em;
+      font-family:$main-font;
+      font-size:.9em;
+      color:#303393;
+      font-weight: bold;
+      }
+    a{
+      text-transform: uppercase;
+      font-weight:bold;
+      color:darken($sec-col, 25%);
+      }
     }
   &--presentacion{
     }

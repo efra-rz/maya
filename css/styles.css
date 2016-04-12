@@ -2823,6 +2823,31 @@ body {
     list-style-type: none;
     padding-left: 1em; }
 
+.servicios__banner, .plagas__banner {
+  background-color: #fff;
+  background-image: url("http://placehold.it/1500x500");
+  background-position: center;
+  height: 500px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .servicios__banner .ed-item, .plagas__banner .ed-item {
+    width: 50%; }
+    .servicios__banner .ed-item h1, .plagas__banner .ed-item h1 {
+      text-align: center; }
+
+.servicios__lista, .plagas__rejilla {
+  background: #fff; }
+
 .home__header {
   margin-top: 30px; }
 
@@ -2973,3 +2998,9 @@ body {
   background-color: red; }
   .nosotros__mvv p {
     color: #fff; }
+
+.servicios__banner {
+  background-image: url("http://placehold.it/1500x500"); }
+
+.plagas__banner {
+  background-image: url("http://placehold.it/1500x500"); }

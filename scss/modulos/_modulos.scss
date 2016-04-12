@@ -1,3 +1,31 @@
+//*************************//
+//****** COMPARTIDOS ******//
+//*************************//
+
+
+//************ BANNERS ************//
+
+.servicios__banner, .plagas__banner{
+  background-color: #fff;
+  background-image: url("http://placehold.it/1500x500");
+  background-position: center;
+  height: 500px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  .ed-item{
+    width: 50%;
+    h1{
+      text-align: center;
+      }
+    }
+  }
+.servicios__lista, .plagas__rejilla{
+  background: #fff;
+  }
+
+
 //****************//
 //******HOME******//
 //****************//
@@ -177,3 +205,23 @@
     color:#fff;
     }
   }
+  //***********************//
+  //****** SERVICIOS ******//
+  //***********************//
+  .servicios__banner{
+    background-image: url("http://placehold.it/1500x500");
+    }
+  .servicios__lista{
+    }
+  //********************//
+  //****** PLAGAS ******//
+  //********************//
+  .plagas__banner{
+    background-image: url("http://placehold.it/1500x500");
+    }
+  .plagas__rejilla{
+    }
+
+  //**********************//
+  //****** CONTACTO ******//
+  //**********************//

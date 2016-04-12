@@ -87,9 +87,6 @@
       }
     li{
       padding:0 .8em;
-      @include to web{
-        padding:2em;
-        }
       }
     a{
       text-transform: uppercase;
@@ -102,8 +99,10 @@
       color:lighten($main-col, 10%);
       &:hover{
         color:$sec-col;
-        border-bottom: 3px solid $sec-col;
-        padding-bottom: 10px;
+          @include from(web){
+            border-bottom: 3px solid $sec-col;
+            padding-bottom: 10px;
+          }
         }
       }
     }

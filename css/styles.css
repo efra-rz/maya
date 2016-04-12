@@ -2926,9 +2926,11 @@ body {
       .logo-menu--menu a {
         font-size: 1em; } }
     .logo-menu--menu a:hover {
-      color: #0000FE;
-      border-bottom: 3px solid #0000FE;
-      padding-bottom: 10px; }
+      color: #0000FE; }
+      @media screen and (min-width: 1024px) {
+        .logo-menu--menu a:hover {
+          border-bottom: 3px solid #0000FE;
+          padding-bottom: 10px; } }
 
 .home__footer {
   background-color: #000019; }

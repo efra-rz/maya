@@ -5,19 +5,33 @@
 
 //************ BANNERS ************//
 
-.servicios__banner, .plagas__banner,.contacto__banner{
+.servicios__banner, .plagas__banner,.contacto__banner, .nosotros__banner{
   background-color: $thrd-col;
   background-image: url("http://placehold.it/1500x500");
   background-position: center;
-  height: 500px;
+  height: 350px;
   display:flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   .ed-item{
-    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    width:auto;
+    background-color: rgba($thrd-col, .5);
+    padding:3em;
+    border-radius: 10px;
     h1{
       text-align: center;
+      padding:0;
+      margin: 0;
+      color:$six-col;
+      line-height: 0;
+      font-family: $thrd-font;
+      font-size: 2em;
+      @include from(tablet){
+        font-size: 3em;
+        }
       }
     }
   }
@@ -93,7 +107,7 @@
       font-weight: bold;
       font-family: $thrd-font;
       font-size: 1.3em;
-      -webkit-transition: all 300ms ease-in-out;
+      -webkit-tion: all 300ms ease-in-out;
       -moz-transition: all 300ms ease-in-out;
       -ms-transition: all 300ms ease-in-out;
       -o-transition: all 300ms ease-in-out;
@@ -126,6 +140,71 @@
       }
     }
   }
+.home__footer-top{
+  background-color: darken($six-col, 15%);
+  padding-bottom:2em;
+  h1{
+    color:#fff;
+    text-align: center;
+    font-size: 1.7em;
+    font-family: $thrd-font;
+    }
+  .footer__form{
+    @include from(tablet){
+      display:flex;
+      justify-content: center;
+      }
+    ul{
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-flow: column wrap;
+      @include from(tablet){
+        width:90%;
+        flex-flow: row nowrap;
+        }
+      }
+    li{
+      flex-grow: 1;
+      @include from(tablet){
+        margin-right: 20px;
+        &:last-child{
+          margin-right: 0;
+          }
+        }
+      input{
+        width:100%;
+        padding:.7em;
+        font-size:.9em;
+        background-color: darken($six-col, 25%);
+        border: 0;
+        color:#fff;
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: #313986;
+        &:focus{
+          cursor: auto;
+          outline-style: solid;
+          outline-width: 1px;
+          color:#fff;
+          outline-color: $main-col;
+          }
+        &.btn-send{
+          background-color: $main-col;
+          -webkit-tion: all 300ms ease-in-out;
+          -moz-transition: all 300ms ease-in-out;
+          -ms-transition: all 300ms ease-in-out;
+          -o-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+          &:hover{
+            background-color: darken($six-col, 25%);
+            cursor:pointer;
+            }
+          }
+        }
+      }
+    }
+  }
 .home__footer{
   background-color: darken($seccol, 45%);
   .ed-item{
@@ -144,20 +223,16 @@
       p{
         margin-bottom: 2em;font-family:$main-font;font-size: .9em;color:$thrd-col;font-weight: bold;
         }
-      .footer__form{
-        ul{
-          list-style-type: none;
-          padding-left: 0;
-          }
+      ul{
+        padding-left: 2em;
+        margin-top: 0;
+        color: #fff;
         li{
-          input,textarea{
-            width:100%;
-            padding:.7em;
-            font-size:.7em;
-            }
-          textarea{
-            padding:.7em;
-            font-size: 1em;
+          padding-bottom: .5em;
+          a{
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
             }
           }
         }
@@ -193,7 +268,8 @@
   }
 .inicio__bienvenidos{
   background-color: $thrd-col;
-  &--presentacion, &--nosotros, &--servicios{
+
+  &--presentacion, &--nosotros, &--servicios, &--acerca-de{
     margin: 2em 0em;
     padding:3em 1em 3em 1em;
     text-align: center;
@@ -206,13 +282,13 @@
       margin:1em 0 .3em;
       font-size: 1.8em;
       text-transform: uppercase;
-      color:darken($thrd-col, 45%);
+      color:$six-col;
       }
     p{
       margin-bottom: 2em;
       font-family:$main-font;
       font-size:.9em;
-      color:$six-col;
+      color:darken($thrd-col, 65%);
       font-weight: bold;
       }
     a{
@@ -220,6 +296,22 @@
       font-weight:bold;
       color:darken($sec-col, 25%);
       }
+    }
+  &--acerca-de{
+    margin:3em;
+    margin-bottom: 0;
+    padding: 0;
+     h1{
+       margin-bottom: 1em;
+       font-size: 3em;
+       color:$six-col;
+     }
+     p{
+       font-size: 1.1em;
+       @include from(tablet){
+         padding:0 2em;
+         }
+       }
     }
   &--presentacion{
     }
@@ -230,7 +322,7 @@
   }
 .inicio__contacto{
   background-color: $thrd-col;
-  padding:2em 0 6em;
+  // padding:2em 0 6em;
   .ed-item{
     padding:0;
     width:100%;
@@ -247,35 +339,167 @@
   //**********************//
   //****** NOSOTROS ******//
   //**********************//
-.nosotros__acerca-de{
-  background-color: red;
+.nosotros__banner{
+  background-image: url("../img/nosotors-grupo-maya-soluciones.jpg");
+  justify-content: flex-start;
+  padding-left: 3em;
+  height: 500px;
+  }
+.nosotros__acerca-de, .nosotros__mvv{
+  background-color: $thrd-col;
+  h1, h2{
+    color:$six-col;
+    }
   p{
-    color:$thrd-col;
+    color:darken($thrd-col, 65%);
+    }
+  }
+.nosotros__acerca-de{
+  padding:3em 2em 0 2em;
+  &--logo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    img{
+      display:flex;
+      align-items: center;
+      max-width:500px;
+      padding:3em;
+      @include from(tablet){
+        max-width: 400px;
+        }
+      }
+    }
+  p{
+    &:last-child{
+      padding-bottom: 3em;
+      }
     }
   }
 .nosotros__mvv{
-  background-color: red;
-  p{
-    color:$thrd-col;
-    }
+  padding: 0 2em 5em 2em;
   }
   //***********************//
   //****** SERVICIOS ******//
   //***********************//
   .servicios__banner{
-    background-image: url("http://placehold.it/1500x500");
+    background-image: url("../img/servicios-fumigaciones-monterrey.jpg");
     }
   .servicios__lista{
+    padding:3em;
+    &--fila{
+      padding:1.5em 0;
+      .ed-item{
+        padding-bottom: 1.5em;
+        display: flex;
+        flex-flow: column wrap;
+        align-items:  center;
+        text-align: center;
+        h2{
+          font-family: $thrd-font;
+          }
+        }
+      }
     }
   //********************//
   //****** PLAGAS ******//
   //********************//
   .plagas__banner{
-    background-image: url("http://placehold.it/1500x500");
+    background-image: url("../img/control-de-plagas-monterrey.jpg");
     }
   .plagas__rejilla{
+    padding:4em 0;
+    display: flex;
+    justify-content: center;
+    .titulo{
+      margin:1em 0;
+      background-color: $main-col;
+      border-radius: 10px;
+      &:hover{
+        background-color: darken($six-col, 25%);
+        cursor: pointer;
+        }
+      h2{
+        color: darken($six-col, 25%);
+        margin: 0;
+        padding: .2em;
+        &:hover{
+          color: $main-col;
+          }
+        }
+      }
+    .descripcion{
+      display: flex;
+      align-items:center;
+      .descripcion-img{
+        width: 250px;
+        }
+      .descripcion-parrafo{
+        width: 100%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        }
+      }
     }
 
   //**********************//
   //****** CONTACTO ******//
   //**********************//
+.contacto__banner{
+  background-image: url("../img/contacta-fumigaciones-en-monterrey.jpg");
+  @include from(tablet){
+    justify-content: flex-end;
+    padding-right: 3em;
+    }
+  }
+.contacto__form-direccion{
+  padding:3em 0 4em;
+  }
+.contacto--form{
+  @include from(tablet){
+    padding-left:2em;
+    }
+  h1{
+    color:$six-col;
+    }
+  form{
+    ul{
+      list-style-type: none;
+      padding:0;
+      li{
+        input{
+          padding:.5em;
+          width:100%;
+          &.btn-send{
+            font-size: 1em;
+            padding:1em;
+            width:auto;
+            &:hover{
+              cursor: pointer;
+              }
+            }
+          }
+        textarea{
+          padding: .5em;
+          width:100%;
+          }
+        }
+      }
+    }
+  }
+.contacto--direccion{
+  @include from(tablet){
+    padding-left:2em;
+    }
+  h1{
+    color:$six-col;
+    }
+  p{
+    color:darken($thrd-col, 65%);
+    margin-bottom: .3em;
+    }
+  p.title{
+      color:$six-col;
+    }
+  }

@@ -1,12 +1,21 @@
 .ed-container.contacto__form-direccion
-  .ed-item.tablet-50
+  .ed-item.tablet-40.contacto--form
     h1 Forma
-    form(action="")
-      input(type="text" placeholder="text")
-      input(type="text" placeholder="text")
-      input(type="text" placeholder="text")
-      textarea(placeholder="text")
-  .ed-item.tablet-50
+    form(action="maya-by-mail.php" method="post")
+      ul
+        li: input(type="text" name="nombre" placeholder="NOMBRE" required)
+        li: input(type="text" name="correo" placeholder="MAIL" required)
+        li: input(type="text" name="telefono" placeholder="TELÉFONO" required)
+        li: textarea(name="mensaje", cols="30", rows="10" placeholder="MENSAJE")
+        li: input.btn-send(type="submit" value="Enviar" id="boton")
+  .ed-item.tablet-60.contacto--direccion
     h1 Dirección
-    p  Lorem ipsum dolor sit amet, consectetur adipisicing.
-    p Telefono <a href="phone: 818338228"> 12342141234</a>
+    p Plutarco Elías Calles no. 2162
+    p Colonia: Fracc. Lomas del Paradero, Guadalajara, Jalisco.
+    p.title <b>Teléfonos:</b>
+    p.title <b>Guadalajara</b>
+    p Tel: (0133) 3838-5151,  3639-5151,  3838-1212
+    p.title <b>Monterrey </b>
+    p Tel: (0181) 8243-3000 
+    p Móvil: (0133) 1611-3120
+    p Nextel  62*1013726*4

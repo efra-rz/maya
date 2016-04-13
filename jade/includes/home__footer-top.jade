@@ -1,0 +1,11 @@
+block footer-form
+  .ed-container.home__footer-top
+    .ed-item
+      h1 ¡Contactenos ya, y con gusto le atenderemos!
+      form.footer__form(action="maya-by-mail.php" method="post")
+        ul
+          li: input(type="text" name="nombre" placeholder="NOMBRE" required)
+          li: input(type="text" name="correo" placeholder="MAIL" required)
+          li: input(type="text" name="telefono" placeholder="TELÉFONO" required)
+          li: input(type="text" name="mensaje" placeholder="MENSAJE" required)
+          li: input.btn-send(type="submit" value="Enviar" id="boton")

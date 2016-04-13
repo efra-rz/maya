@@ -2823,11 +2823,11 @@ body {
     list-style-type: none;
     padding-left: 1em; }
 
-.servicios__banner, .plagas__banner, .contacto__banner {
+.servicios__banner, .plagas__banner, .contacto__banner, .nosotros__banner {
   background-color: #fff;
   background-image: url("http://placehold.it/1500x500");
   background-position: center;
-  height: 500px;
+  height: 350px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2840,10 +2840,28 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .servicios__banner .ed-item, .plagas__banner .ed-item, .contacto__banner .ed-item {
-    width: 50%; }
-    .servicios__banner .ed-item h1, .plagas__banner .ed-item h1, .contacto__banner .ed-item h1 {
-      text-align: center; }
+  .servicios__banner .ed-item, .plagas__banner .ed-item, .contacto__banner .ed-item, .nosotros__banner .ed-item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3em;
+    border-radius: 10px; }
+    .servicios__banner .ed-item h1, .plagas__banner .ed-item h1, .contacto__banner .ed-item h1, .nosotros__banner .ed-item h1 {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      color: #2A3D8E;
+      line-height: 0;
+      font-family: "News Cycle";
+      font-size: 2em; }
+      @media screen and (min-width: 768px) {
+        .servicios__banner .ed-item h1, .plagas__banner .ed-item h1, .contacto__banner .ed-item h1, .nosotros__banner .ed-item h1 {
+          font-size: 3em; } }
 
 .servicios__lista, .plagas__rejilla, .contacto__form-direccion {
   background: #fff; }
@@ -2920,6 +2938,7 @@ body {
     font-weight: bold;
     font-family: "News Cycle";
     font-size: 1.3em;
+    -webkit-tion: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
     color: #4489ff; }
     @media screen and (max-width: 1023px) {
@@ -2940,6 +2959,70 @@ body {
     .logo-menu--menu a.activo {
       color: #2A3D8E; }
 
+.home__footer-top {
+  background-color: #192453;
+  padding-bottom: 2em; }
+  .home__footer-top h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.7em;
+    font-family: "News Cycle"; }
+  @media screen and (min-width: 768px) {
+    .home__footer-top .footer__form {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .home__footer-top .footer__form ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap; }
+    @media screen and (min-width: 768px) {
+      .home__footer-top .footer__form ul {
+        width: 90%;
+        -webkit-flex-flow: row nowrap;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap; } }
+  .home__footer-top .footer__form li {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    @media screen and (min-width: 768px) {
+      .home__footer-top .footer__form li {
+        margin-right: 20px; }
+        .home__footer-top .footer__form li:last-child {
+          margin-right: 0; } }
+    .home__footer-top .footer__form li input {
+      width: 100%;
+      padding: .7em;
+      font-size: .9em;
+      background-color: #0d132c;
+      border: 0;
+      color: #fff;
+      outline-style: solid;
+      outline-width: 1px;
+      outline-color: #313986; }
+      .home__footer-top .footer__form li input:focus {
+        cursor: auto;
+        outline-style: solid;
+        outline-width: 1px;
+        color: #fff;
+        outline-color: #1169FF; }
+      .home__footer-top .footer__form li input.btn-send {
+        background-color: #1169FF;
+        -webkit-tion: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out; }
+        .home__footer-top .footer__form li input.btn-send:hover {
+          background-color: #0d132c;
+          cursor: pointer; }
+
 .home__footer {
   background-color: #000019; }
   .home__footer .ed-item .footer-box {
@@ -2958,16 +3041,16 @@ body {
       font-size: .9em;
       color: #fff;
       font-weight: bold; }
-    .home__footer .ed-item .footer-box .footer__form ul {
-      list-style-type: none;
-      padding-left: 0; }
-    .home__footer .ed-item .footer-box .footer__form li input, .home__footer .ed-item .footer-box .footer__form li textarea {
-      width: 100%;
-      padding: .7em;
-      font-size: .7em; }
-    .home__footer .ed-item .footer-box .footer__form li textarea {
-      padding: .7em;
-      font-size: 1em; }
+    .home__footer .ed-item .footer-box ul {
+      padding-left: 2em;
+      margin-top: 0;
+      color: #fff; }
+      .home__footer .ed-item .footer-box ul li {
+        padding-bottom: .5em; }
+        .home__footer .ed-item .footer-box ul li a {
+          color: #fff;
+          font-size: 1.2em;
+          font-weight: bold; }
 
 .home__credits {
   background-color: #2A3D8E;
@@ -2991,35 +3074,47 @@ body {
 
 .inicio__bienvenidos {
   background-color: #fff; }
-  .inicio__bienvenidos--presentacion, .inicio__bienvenidos--nosotros, .inicio__bienvenidos--servicios {
+  .inicio__bienvenidos--presentacion, .inicio__bienvenidos--nosotros, .inicio__bienvenidos--servicios, .inicio__bienvenidos--acerca-de {
     margin: 2em 0em;
     padding: 3em 1em 3em 1em;
     text-align: center; }
     @media screen and (max-width: 1023px) {
-      .inicio__bienvenidos--presentacion, .inicio__bienvenidos--nosotros, .inicio__bienvenidos--servicios {
+      .inicio__bienvenidos--presentacion, .inicio__bienvenidos--nosotros, .inicio__bienvenidos--servicios, .inicio__bienvenidos--acerca-de {
         margin: 0; } }
-    .inicio__bienvenidos--presentacion img, .inicio__bienvenidos--nosotros img, .inicio__bienvenidos--servicios img {
+    .inicio__bienvenidos--presentacion img, .inicio__bienvenidos--nosotros img, .inicio__bienvenidos--servicios img, .inicio__bienvenidos--acerca-de img {
       border-radius: 5%; }
-    .inicio__bienvenidos--presentacion h2, .inicio__bienvenidos--nosotros h2, .inicio__bienvenidos--servicios h2 {
+    .inicio__bienvenidos--presentacion h2, .inicio__bienvenidos--nosotros h2, .inicio__bienvenidos--servicios h2, .inicio__bienvenidos--acerca-de h2 {
       margin: 0;
       margin: 1em 0 .3em;
       font-size: 1.8em;
       text-transform: uppercase;
-      color: #8c8c8c; }
-    .inicio__bienvenidos--presentacion p, .inicio__bienvenidos--nosotros p, .inicio__bienvenidos--servicios p {
+      color: #2A3D8E; }
+    .inicio__bienvenidos--presentacion p, .inicio__bienvenidos--nosotros p, .inicio__bienvenidos--servicios p, .inicio__bienvenidos--acerca-de p {
       margin-bottom: 2em;
       font-family: "Open Sans";
       font-size: .9em;
-      color: #2A3D8E;
+      color: #595959;
       font-weight: bold; }
-    .inicio__bienvenidos--presentacion a, .inicio__bienvenidos--nosotros a, .inicio__bienvenidos--servicios a {
+    .inicio__bienvenidos--presentacion a, .inicio__bienvenidos--nosotros a, .inicio__bienvenidos--servicios a, .inicio__bienvenidos--acerca-de a {
       text-transform: uppercase;
       font-weight: bold;
       color: #00007f; }
+  .inicio__bienvenidos--acerca-de {
+    margin: 3em;
+    margin-bottom: 0;
+    padding: 0; }
+    .inicio__bienvenidos--acerca-de h1 {
+      margin-bottom: 1em;
+      font-size: 3em;
+      color: #2A3D8E; }
+    .inicio__bienvenidos--acerca-de p {
+      font-size: 1.1em; }
+      @media screen and (min-width: 768px) {
+        .inicio__bienvenidos--acerca-de p {
+          padding: 0 2em; } }
 
 .inicio__contacto {
-  background-color: #fff;
-  padding: 2em 0 6em; }
+  background-color: #fff; }
   .inicio__contacto .ed-item {
     padding: 0;
     width: 100%;
@@ -3035,18 +3130,159 @@ body {
   .inicio__contacto .maps iframe {
     pointer-events: none; }
 
+.nosotros__banner {
+  background-image: url("../img/nosotors-grupo-maya-soluciones.jpg");
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 3em;
+  height: 500px; }
+
+.nosotros__acerca-de, .nosotros__mvv {
+  background-color: #fff; }
+  .nosotros__acerca-de h1, .nosotros__acerca-de h2, .nosotros__mvv h1, .nosotros__mvv h2 {
+    color: #2A3D8E; }
+  .nosotros__acerca-de p, .nosotros__mvv p {
+    color: #595959; }
+
 .nosotros__acerca-de {
-  background-color: red; }
-  .nosotros__acerca-de p {
-    color: #fff; }
+  padding: 3em 2em 0 2em; }
+  .nosotros__acerca-de--logo {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .nosotros__acerca-de--logo img {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      max-width: 500px;
+      padding: 3em; }
+      @media screen and (min-width: 768px) {
+        .nosotros__acerca-de--logo img {
+          max-width: 400px; } }
+  .nosotros__acerca-de p:last-child {
+    padding-bottom: 3em; }
 
 .nosotros__mvv {
-  background-color: red; }
-  .nosotros__mvv p {
-    color: #fff; }
+  padding: 0 2em 5em 2em; }
 
 .servicios__banner {
-  background-image: url("http://placehold.it/1500x500"); }
+  background-image: url("../img/servicios-fumigaciones-monterrey.jpg"); }
+
+.servicios__lista {
+  padding: 3em; }
+  .servicios__lista--fila {
+    padding: 1.5em 0; }
+    .servicios__lista--fila .ed-item {
+      padding-bottom: 1.5em;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: column wrap;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center; }
+      .servicios__lista--fila .ed-item h2 {
+        font-family: "News Cycle"; }
 
 .plagas__banner {
-  background-image: url("http://placehold.it/1500x500"); }
+  background-image: url("../img/control-de-plagas-monterrey.jpg"); }
+
+.plagas__rejilla {
+  padding: 4em 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .plagas__rejilla .titulo {
+    margin: 1em 0;
+    background-color: #1169FF;
+    border-radius: 10px; }
+    .plagas__rejilla .titulo:hover {
+      background-color: #0d132c;
+      cursor: pointer; }
+    .plagas__rejilla .titulo h2 {
+      color: #0d132c;
+      margin: 0;
+      padding: .2em; }
+      .plagas__rejilla .titulo h2:hover {
+        color: #1169FF; }
+  .plagas__rejilla .descripcion {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .plagas__rejilla .descripcion .descripcion-img {
+      width: 250px; }
+    .plagas__rejilla .descripcion .descripcion-parrafo {
+      width: 100%;
+      margin-right: 20px;
+      margin-bottom: 20px; }
+
+.contacto__banner {
+  background-image: url("../img/contacta-fumigaciones-en-monterrey.jpg"); }
+  @media screen and (min-width: 768px) {
+    .contacto__banner {
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      padding-right: 3em; } }
+
+.contacto__form-direccion {
+  padding: 3em 0 4em; }
+
+@media screen and (min-width: 768px) {
+  .contacto--form {
+    padding-left: 2em; } }
+
+.contacto--form h1 {
+  color: #2A3D8E; }
+
+.contacto--form form ul {
+  list-style-type: none;
+  padding: 0; }
+  .contacto--form form ul li input {
+    padding: .5em;
+    width: 100%; }
+    .contacto--form form ul li input.btn-send {
+      font-size: 1em;
+      padding: 1em;
+      width: auto; }
+      .contacto--form form ul li input.btn-send:hover {
+        cursor: pointer; }
+  .contacto--form form ul li textarea {
+    padding: .5em;
+    width: 100%; }
+
+@media screen and (min-width: 768px) {
+  .contacto--direccion {
+    padding-left: 2em; } }
+
+.contacto--direccion h1 {
+  color: #2A3D8E; }
+
+.contacto--direccion p {
+  color: #595959;
+  margin-bottom: .3em; }
+
+.contacto--direccion p.title {
+  color: #2A3D8E; }

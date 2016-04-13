@@ -1,5 +1,8 @@
 extends templates/home
-  
+block title
+  title Inicio
+block menu-inicio
+  li: a.activo(href="index.html") Inicio
 block content
   section#inicio__slider-principal
     include includes/inicio__slider-principal

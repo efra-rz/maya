@@ -6,7 +6,7 @@
 //************ BANNERS ************//
 
 .servicios__banner, .plagas__banner,.contacto__banner{
-  background-color: #fff;
+  background-color: $thrd-col;
   background-image: url("http://placehold.it/1500x500");
   background-position: center;
   height: 500px;
@@ -22,7 +22,7 @@
     }
   }
 .servicios__lista, .plagas__rejilla,.contacto__form-direccion{
-  background: #fff;
+  background: $thrd-col;
   }
 
 
@@ -34,12 +34,12 @@
   margin-top:30px;
   }
 .topbar{
-  background-color: #303393;
+  background-color: $six-col;
   width:100%;
   padding: .3em 0 .3em;
   text-align: right;
   a{
-    color:#fff;
+    color:$thrd-col;
     font-weight: bold;
     font-size: .9em;
     }
@@ -55,7 +55,7 @@
     }
   }
 .logo-menu{
-  background-color: #fff;
+  background-color: $thrd-col;
   color:#000;
   display: flex;
   flex-flow:row wrap;
@@ -89,20 +89,39 @@
       padding:0 .8em;
       }
     a{
-      text-transform: uppercase;
+      //text-transform: uppercase;
       font-weight: bold;
       font-family: $thrd-font;
       font-size: 1.3em;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -ms-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
       @include to(web){
+        display: block;
         font-size: 1em;
+        padding:.4em 0;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        &:hover{
+          background-color: lighten($main-col, 30%);
+          padding-left: 20px;
+          }
         }
       color:lighten($main-col, 10%);
       &:hover{
-        color:$sec-col;
-          @include from(web){
-            border-bottom: 3px solid $sec-col;
-            padding-bottom: 10px;
+        color:$six-col;
+        @include from(web){
+          border-bottom: 3px solid $six-col;
+          padding-bottom: 10px;
           }
+        }
+      &.activo{
+        color:$six-col;
         }
       }
     }
@@ -146,10 +165,10 @@
     }
   }
 .home__credits{
-  background-color: darken($seccol, 35%);
+  background-color: $six-col;
   margin-bottom: 20px;
   a{
-    color:#fff;
+    color:$thrd-col;
     text-align: center;
     font-size: 1.5em;
     display: block;
@@ -162,7 +181,7 @@
 //*****************//
 
 .inicio__slider-principal{
-  background-color: #fff;
+  background-color: $thrd-col;
   color:black;
   .inicio--slider-box{
     padding:0;
@@ -173,7 +192,7 @@
     }
   }
 .inicio__bienvenidos{
-  background-color: #fff;
+  background-color: $thrd-col;
   &--presentacion, &--nosotros, &--servicios{
     margin: 2em 0em;
     padding:3em 1em 3em 1em;
@@ -193,7 +212,7 @@
       margin-bottom: 2em;
       font-family:$main-font;
       font-size:.9em;
-      color:#303393;
+      color:$six-col;
       font-weight: bold;
       }
     a{
@@ -210,7 +229,7 @@
     }
   }
 .inicio__contacto{
-  background-color: #fff;
+  background-color: $thrd-col;
   padding:2em 0 6em;
   .ed-item{
     padding:0;
@@ -231,13 +250,13 @@
 .nosotros__acerca-de{
   background-color: red;
   p{
-    color:#fff;
+    color:$thrd-col;
     }
   }
 .nosotros__mvv{
   background-color: red;
   p{
-    color:#fff;
+    color:$thrd-col;
     }
   }
   //***********************//

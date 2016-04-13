@@ -1,5 +1,8 @@
 extends templates/home
-  
+block title
+  title Servcios
+block menu-servicios
+  li: a.activo(href="servicios.html") Servcios    
 block content
   section#servicios
     include includes/servicios__banner

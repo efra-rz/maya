@@ -2852,7 +2852,7 @@ body {
   margin-top: 30px; }
 
 .topbar {
-  background-color: #303393;
+  background-color: #2A3D8E;
   width: 100%;
   padding: .3em 0 .3em;
   text-align: right; }
@@ -2917,20 +2917,28 @@ body {
   .logo-menu--menu li {
     padding: 0 .8em; }
   .logo-menu--menu a {
-    text-transform: uppercase;
     font-weight: bold;
     font-family: "News Cycle";
     font-size: 1.3em;
+    transition: all 300ms ease-in-out;
     color: #4489ff; }
     @media screen and (max-width: 1023px) {
       .logo-menu--menu a {
-        font-size: 1em; } }
+        display: block;
+        font-size: 1em;
+        padding: .4em 0;
+        transition: all 300ms ease-in-out; }
+        .logo-menu--menu a:hover {
+          background-color: #aac9ff;
+          padding-left: 20px; } }
     .logo-menu--menu a:hover {
-      color: #0000FE; }
+      color: #2A3D8E; }
       @media screen and (min-width: 1024px) {
         .logo-menu--menu a:hover {
-          border-bottom: 3px solid #0000FE;
+          border-bottom: 3px solid #2A3D8E;
           padding-bottom: 10px; } }
+    .logo-menu--menu a.activo {
+      color: #2A3D8E; }
 
 .home__footer {
   background-color: #000019; }
@@ -2962,7 +2970,7 @@ body {
       font-size: 1em; }
 
 .home__credits {
-  background-color: #00004c;
+  background-color: #2A3D8E;
   margin-bottom: 20px; }
   .home__credits a {
     color: #fff;
@@ -3002,7 +3010,7 @@ body {
       margin-bottom: 2em;
       font-family: "Open Sans";
       font-size: .9em;
-      color: #303393;
+      color: #2A3D8E;
       font-weight: bold; }
     .inicio__bienvenidos--presentacion a, .inicio__bienvenidos--nosotros a, .inicio__bienvenidos--servicios a {
       text-transform: uppercase;

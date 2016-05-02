@@ -4,7 +4,7 @@
 $email_to = "info@efrix.net"; //Direcciones a las que se enviara el correo
 $email_from ="contacto@grupomaya.com"; //Direccion que quieras que le aparezca al cliente
 $email_subject = "Formulario desde sitio web Maya"; //Asunto
-$email_bcc = "webmaster@morraldeyute.com. lily@maildelmorral.com, admorral@gmail.com"; //Direcciones copias ocultas
+$email_bcc = "webmaster@morraldeyute.com"; //Direcciones copias ocultas
 
 // Variables del mensaje
 $nombre = $_POST['nombre'];

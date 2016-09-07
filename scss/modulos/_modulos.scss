@@ -312,6 +312,10 @@
          padding:0 2em;
          }
        }
+      img{
+        max-width: 450px;
+        margin-bottom: 4em;
+        }
     }
   &--presentacion{
     }
@@ -340,10 +344,10 @@
   //****** NOSOTROS ******//
   //**********************//
 .nosotros__banner{
-  background-image: url("../img/nosotors-grupo-maya-soluciones.jpg");
+  background-image: url("../img/control-plagas-y-fumigaciones-monterrey-4.jpg");
   justify-content: flex-start;
   padding-left: 3em;
-  height: 500px;
+  height: 400px;
   }
 .nosotros__acerca-de, .nosotros__mvv{
   background-color: $thrd-col;
@@ -364,7 +368,8 @@
     img{
       display:flex;
       align-items: center;
-      max-width:500px;
+      max-width:430px;
+      height:250px;
       padding:3em;
       @include from(tablet){
         max-width: 400px;

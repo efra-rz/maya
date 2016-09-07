@@ -2939,6 +2939,9 @@ body {
       text-align: center; }
       .servicios__lista--fila .ed-item h2 {
         font-family: "News Cycle"; }
+      .servicios__lista--fila .ed-item img {
+        border-radius: 50%;
+        margin-bottom: 2em; }
 
 .plagas__banner {
   background-image: url("../img/control-de-plagas-monterrey.jpg"); }
